@@ -1,7 +1,15 @@
-def is_integer(string):
-    try:
-        int(string)
-        return True
-    except ValueError:
+from fractions import Fraction
+def is_fraction(string):
+    if ' ' in string:
         return False
-print(is_integer('-43'))
+    elif '/' in string:
+        try:
+           Fraction(string)
+           return True
+        except Exception:
+            return False
+    else:
+        return False
+
+
+print(is_fraction('1 / 1'))
