@@ -9,6 +9,4 @@ def pluck(data, path, default=None):
 
 
 
-d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
 
-print(pluck(d, 'c.d'))
