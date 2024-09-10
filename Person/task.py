@@ -3,13 +3,14 @@ class Person:
         self.name = name
         self.surname = surname
 
-    def get_fullname(self):
+    @property
+    def fullname(self):
         return self.name + ' ' + self.surname
 
-    def set_fullname(self, fullname):
+    @fullname.setter
+    def fullname(self, fullname):
         self.name, self.surname = fullname.split()
 
-    fullname = property(get_fullname, set_fullname)
 
 person = Person('Джон', 'Маккарти')
 
